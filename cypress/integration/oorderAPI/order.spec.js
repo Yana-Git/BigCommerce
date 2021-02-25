@@ -37,15 +37,15 @@ describe("order API test", function () {
     });
   });
 
-  // it("check new order", function () {
-  //   cy.visit("https://login.bigcommerce.com/login");
-  //   cy.get("#user_email").clear().type("yaowang274@gmail.com");
-  //   cy.get("#user_password").clear().type("wangSONG123.");
-  //   cy.get(".login-form-button").click();
-  //   cy.url().should("include", "/manage/dashboard");
-  //   cy.get("a").find("span").contains("Orders").click();
-  //   cy.get(".order-status");
-  // });
+  it("check new order", function () {
+    cy.visit("https://login.bigcommerce.com/login");
+    cy.get("#user_email").clear().type("yaowang274@gmail.com");
+    cy.get("#user_password").clear().type("wangSONG123.");
+    cy.get(".login-form-button").click();
+    cy.url().should("include", "/manage/dashboard");
+    cy.get("a").find("span").contains("Orders").click();
+    cy.get(".order-status");
+  });
 
   it("check order status", function () {
     cy.request({
